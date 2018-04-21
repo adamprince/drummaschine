@@ -1,11 +1,34 @@
-<html>
+<!doctype html>
+<html class="no-js" lang="">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Drummaschine</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/index.js"></script>
   </head>
   <body>
+
+    <div class="wrapper">
+      <section class="main">
+        <div class="content">
+          <p>Use your keyboard to play the drummaschine</p>
+          <a href="#" class="contact">Contact</a>
+        </div>
+      </section>
+      <footer class="footer">
+        <small class="attribution">
+          Made by <a href="http://adamprince.us" target="_blank">Adam Prince</a>. Samples by <a href="https://awolfe.home.xs4all.nl/samples.html" target="_blank">Legowelt</a>.
+        </small>
+      </footer>
+    </div>
 
     <section class="keys">
       <div data-key="81" class="key"><kbd>q</kbd></div>
@@ -67,5 +90,12 @@
     <audio data-key="77" src="audio/dr660-bassdrum-kraftwerkesque.wav" preload></audio>
     <audio data-key="32" src="audio/dr660-cymbal-crash.wav" preload></audio>
 
+    <script src="js/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
   </body>
 </html>

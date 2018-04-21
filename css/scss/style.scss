@@ -1,0 +1,87 @@
+// variables
+
+// Colors
+$black: #383838;
+$purple: #2a38c3;
+
+// Spacing
+$spacer: 2rem;
+
+// Mixins
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+  background-repeat: repeat-x;
+  background-image: linear-gradient($deg, $start-color, $end-color);
+}
+
+// Animation
+@keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700');
+
+body {
+  @include gradient-directional(LightSalmon , LightYellow , 45deg);
+  animation: animate-gradient 15s ease infinite;
+  background-size: 400% 400%;
+  color: $black;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 150%;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  color: $purple;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 90%;
+  text-align: center;
+}
+
+.contact {
+  border: 3px solid $purple;
+  box-shadow: 4px 5px 0px 0px $purple;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 $spacer;
+  padding: $spacer/2 $spacer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 14px 15px 0px 0px $purple;
+    transform: translate(-10px, -10px);
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  padding: $spacer 0;
+}
+
+.footer {
+  margin-top: auto;
+  padding: $spacer 0;
+}
+
+.keys {
+  display: none;
+}
