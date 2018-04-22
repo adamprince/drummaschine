@@ -45,6 +45,35 @@ a:hover {
   color: $purple;
 }
 
+.button {
+  background-color: transparent;
+  border: 3px solid $black;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.5;
+  padding: $spacer/2 $spacer;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+// Spoof Keyboard for mobile
+#dummy-text {
+}
+
+.mobile-keyboard {
+  display: none;
+  @media (any-hover: none) {
+    display: block;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
