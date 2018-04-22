@@ -21,7 +21,7 @@
         <div class="content">
           <p>Use your keyboard to play the drummaschine</p>
           <div class="mobile-keyboard">
-            <input type="hidden" id="dummy-text">
+            <input type="hidden" id="dummy-text" />
             <button class="button" onclick="popKeyboard();">show keyboard</button>
           </div>
         </div>
@@ -36,9 +36,14 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script>
-      function popKeyboard() {
-        document.getElementById("dummy-text").focus();
-      }
+      $( document ).ready(function() {
+        $('button').on('click', function() {
+          $('input').focus();
+        });
+        $('select').on('change', function() {
+          $('input').focus();
+        });
+      });
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
