@@ -27,6 +27,10 @@ $spacer: 2rem;
 }
 
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700');
+html,
+body {
+  min-height: 100%;
+}
 
 body {
   @include gradient-directional(LightSalmon , LightYellow , 45deg);
@@ -86,13 +90,41 @@ a:hover {
   }
 }
 
+.pads {
+  display: none;
+  @media (any-hover: none) {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: calc(100vh - 6px);
+    padding: 3px;
+    .pad {
+      background-color: rgba(255,255,255,0.2);
+      background-position: center;
+      transition: background 0.3s;
+  
+      &:hover {
+        background: LightSalmon radial-gradient(circle, transparent 1%, LightSalmon 1%) center/15000%;
+      }
+      &:active {
+        background-color: rgba(255,255,255,0.2);
+        background-size: 100%;
+        transition: background 0s;
+      }
+    }
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin: 0 auto;
-  max-width: 90%;
   text-align: center;
+}
+
+.content {
+  padding: $spacer;
 }
 
 .contact {
@@ -115,12 +147,11 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
-  padding: $spacer 0;
 }
 
 .footer {
   margin-top: auto;
-  padding: $spacer 0;
+  padding: $spacer;
 }
 
 .keys {

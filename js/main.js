@@ -131,8 +131,48 @@ var keyData = {
   }
 };
 
-document.addEventListener('keydown', function (event) {
-  if(event.key){
-    keyData[event.key].sound.play();
-  }
-});
+// Touch Devices
+if ("ontouchstart" in document.documentElement) {
+  document.getElementById("pad-1").addEventListener("click", function(){
+    keyData.q.sound.play();
+  });
+  document.getElementById("pad-2").addEventListener("click", function(){
+    keyData.w.sound.play();
+  });
+  document.getElementById("pad-3").addEventListener("click", function(){
+    keyData.e.sound.play();
+  });
+  document.getElementById("pad-4").addEventListener("click", function(){
+    keyData.b.sound.play();
+  });
+  document.getElementById("pad-5").addEventListener("click", function(){
+    keyData.t.sound.play();
+  });
+  document.getElementById("pad-6").addEventListener("click", function(){
+    keyData.x.sound.play();
+  });
+  document.getElementById("pad-7").addEventListener("click", function(){
+    keyData.u.sound.play();
+  });
+  document.getElementById("pad-8").addEventListener("click", function(){
+    keyData.i.sound.play();
+  });
+  document.getElementById("pad-9").addEventListener("click", function(){
+    keyData.o.sound.play();
+  });
+  document.getElementById("pad-10").addEventListener("click", function(){
+    keyData.p.sound.play();
+  });
+  document.getElementById("pad-11").addEventListener("click", function(){
+    keyData.a.sound.play();
+  });
+  document.getElementById("pad-12").addEventListener("click", function(){
+    keyData.j.sound.play();
+  });
+} else {
+  document.addEventListener('keydown', function (event) {
+    if(event.key){
+      keyData[event.key].sound.play();
+    }
+  });
+}
