@@ -67,32 +67,19 @@ a:hover {
   white-space: nowrap;
 }
 
-// Spoof Keyboard for mobile
-#dummy-field {
-  height: 0;
-  left: -9999px;
-  opacity: 0;
-  position: absolute;
-  width: 0;
-}
-
 .keyboard-only {
   display: none;
   @media (any-hover: hover) {
-    display: block;
-  }
-}
-
-.touch-only {
-  display: none;
-  @media (any-hover: none) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
   }
 }
 
 .pads {
   display: none;
-  @media (any-hover: none) {
+   @media (any-hover: none) {
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(3, 1fr);
@@ -114,13 +101,6 @@ a:hover {
       }
     }
   }
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  text-align: center;
 }
 
 .content {
