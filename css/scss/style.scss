@@ -72,7 +72,14 @@ a:hover {
   width: 0;
 }
 
-.mobile-keyboard {
+.keyboard-only {
+  display: none;
+  @media (any-hover: hover) {
+    display: block;
+  }
+}
+
+.touch-only {
   display: none;
   @media (any-hover: none) {
     display: block;
