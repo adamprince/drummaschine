@@ -36,14 +36,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script>
-      $( document ).ready(function() {
-        $('button').on('click', function() {
-          $('input').focus();
-        });
-        $('select').on('change', function() {
-          $('input').focus();
-        });
-      });
+      function popKeyboard() {
+        document.getElementsByClassName("dummy-text").focus();
+      }
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
