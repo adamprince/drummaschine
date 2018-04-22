@@ -64,7 +64,10 @@ a:hover {
 }
 
 // Spoof Keyboard for mobile
-#dummy-text {
+.dummy-text {
+  height: 0;
+  width: 0;
+  opacity: 0;
 }
 
 .mobile-keyboard {
