@@ -70,17 +70,11 @@ a:hover {
     box-shadow: inset 1px 1px 0 $purple;
     flex-grow: 1;
     height: 25vh;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease;
     width: calc(100vw / 3);
 
-    &:hover {
-      background: LightSalmon radial-gradient(circle, transparent 1%, LightSalmon 1%) center/15000%;
-    }
-
     &:active {
-      background-color: LightYellow;
-      background-size: 100%;
-      transition: background 0s;
+      background-color: LightSalmon;
     }
   }
   @media only screen and (min-width: 769px) {
