@@ -69,10 +69,11 @@ a:hover {
   .pad {
     background-color: LightSalmon;
     background-position: center;
-    transition: background 0.3s;
-
     box-shadow: 3px 3px 0px 0px darken(LightSalmon, 5%);
-    cursor: pointer;
+    display: flex;
+    transition: background 0.3s;
+    min-width: 0;
+    min-height: 0;
 
     &:hover {
       background: LightSalmon radial-gradient(circle, transparent 1%, LightSalmon 1%) center/15000%;
