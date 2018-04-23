@@ -62,8 +62,8 @@ a:hover {
 .pads {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   height: calc(100vh - 2rem);
   padding: 1rem;
   .pad {
