@@ -71,8 +71,8 @@ a:hover {
     background-position: center;
     box-shadow: 3px 3px 0px 0px darken(LightSalmon, 5%);
     transition: background 0.3s;
-    min-width: 0;
-    min-height: 4rem;
+    min-width: 1px;
+    min-height: 1px;
 
     &:hover {
       background: LightSalmon radial-gradient(circle, transparent 1%, LightSalmon 1%) center/15000%;
