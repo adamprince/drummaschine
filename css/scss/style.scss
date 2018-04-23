@@ -73,7 +73,6 @@ a:hover {
 
     box-shadow: 3px 3px 0px 0px darken(LightSalmon, 5%);
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
 
     &:hover {
       background: LightSalmon radial-gradient(circle, transparent 1%, LightSalmon 1%) center/15000%;
