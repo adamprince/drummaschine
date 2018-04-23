@@ -49,27 +49,9 @@ a:hover {
   color: $purple;
 }
 
-.button {
-  background-color: transparent;
-  border: 3px solid $black;
-  border-radius: 0;
-  color: inherit;
-  cursor: pointer;
-  display: inline-block;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: 1.5;
-  padding: $spacer/2 $spacer;
-  text-align: center;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.keyboard-only {
+.wrapper {
   display: none;
-  @media (hover: hover) {
+  @media only screen and (min-width: 769px) {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -78,48 +60,38 @@ a:hover {
 }
 
 .pads {
-  display: none;
-  @media (hover: none) {
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    height: calc(100vh - 6px);
-    padding: 3px;
-    .pad {
-      background-color: rgba(255,255,255,0.2);
-      background-position: center;
-      transition: background 0.3s;
-    
-      &:hover {
-        background: LightSalmon radial-gradient(circle, transparent 1%, LightSalmon 1%) center/15000%;
-      }
-      &:active {
-        background-color: rgba(255,255,255,0.2);
-        background-size: 100%;
-        transition: background 0s;
-      }
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: calc(100vh - 2rem);
+  padding: 1rem;
+  .pad {
+    background-color: LightSalmon;
+    background-position: center;
+    transition: background 0.3s;
+
+    box-shadow: 3px 3px 0px 0px darken(LightSalmon, 5%);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: LightSalmon radial-gradient(circle, transparent 1%, LightSalmon 1%) center/15000%;
     }
+
+    &:active {
+      background-color: LightYellow;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+  @media only screen and (min-width: 769px) {
+    display: none;
   }
 }
 
 .content {
   padding: $spacer;
-}
-
-.contact {
-  border: 3px solid $purple;
-  box-shadow: 4px 5px 0px 0px $purple;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 $spacer;
-  padding: $spacer/2 $spacer;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    box-shadow: 14px 15px 0px 0px $purple;
-    transform: translate(-10px, -10px);
-  }
 }
 
 .main {
@@ -132,8 +104,4 @@ a:hover {
 .footer {
   margin-top: auto;
   padding: $spacer;
-}
-
-.keys {
-  display: none;
 }
