@@ -63,7 +63,7 @@ a:hover {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   height: calc(100vh - 2rem);
   padding: 1rem;
   .pad {
@@ -71,8 +71,6 @@ a:hover {
     background-position: center;
     box-shadow: 3px 3px 0px 0px darken(LightSalmon, 5%);
     transition: background 0.3s;
-    min-width: 1px;
-    min-height: 1px;
 
     &:hover {
       background: LightSalmon radial-gradient(circle, transparent 1%, LightSalmon 1%) center/15000%;
