@@ -27,6 +27,11 @@ $spacer: 2rem;
 }
 
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700');
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   min-height: 100%;
@@ -66,8 +71,7 @@ a:hover {
 
   .pad {
     background-color: transparent;
-    background-position: center;
-    box-shadow: inset 1px 1px 0 $purple;
+    border: 3px solid $purple;
     flex-grow: 1;
     height: 25vh;
     transition: background-color 0.3s ease;
