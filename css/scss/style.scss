@@ -65,12 +65,13 @@ a:hover {
   height: 100vh;
 
   .pad {
-    background-color: LightSalmon;
+    background-color: transparent;
     background-position: center;
     box-shadow: inset 1px 1px 0 $purple;
     flex-grow: 1;
-    width: 33.333%;
+    height: 25vh;
     transition: background 0.3s;
+    width: calc(100vw / 3);
 
     &:hover {
       background: LightSalmon radial-gradient(circle, transparent 1%, LightSalmon 1%) center/15000%;
