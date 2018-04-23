@@ -60,16 +60,16 @@ a:hover {
 }
 
 .pads {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  height: calc(100vh - 2rem);
-  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+
   .pad {
     background-color: LightSalmon;
     background-position: center;
-    box-shadow: 3px 3px 0px 0px darken(LightSalmon, 5%);
+    box-shadow: inset 1px 1px 0 $purple;
+    flex-grow: 1;
+    width: 33.333%;
     transition: background 0.3s;
 
     &:hover {
