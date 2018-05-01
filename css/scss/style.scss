@@ -7,7 +7,19 @@ $purple: #2a38c3;
 // Spacing
 $spacer: 2rem;
 
-// Mixins
+// Mixins and Functions
+@function makelongshadow($color) {
+  $val: 0px 0px $color;
+  @for $i from 1 through 600 {
+    $val: #{$val}, #{$i}px #{$i}px #{$color};
+  }
+  @return $val;
+}
+
+@mixin longshadow($color) {
+  text-shadow: makelongshadow($color);
+}
+
 @mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
   background-repeat: repeat-x;
   background-image: linear-gradient($deg, $start-color, $end-color);
@@ -52,6 +64,11 @@ body {
 a,
 a:hover {
   color: $purple;
+}
+
+// Typography {
+h1 {
+  @include longshadow(lighten($purple, 25%));
 }
 
 .wrapper {
