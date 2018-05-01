@@ -131,6 +131,14 @@ var keyData = {
   }
 };
 
+// Desktop
+document.addEventListener('keydown', function (event) {
+  if(event.key){
+    keyData[event.key].sound.play();
+  }
+});
+
+// Mobile
 document.getElementById("pad-1").addEventListener("click", function(){
   keyData.q.sound.play();
 });
@@ -166,10 +174,4 @@ document.getElementById("pad-11").addEventListener("click", function(){
 });
 document.getElementById("pad-12").addEventListener("click", function(){
   keyData.j.sound.play();
-});
-
-document.addEventListener('keydown', function (event) {
-  if(event.key){
-    keyData[event.key].sound.play();
-  }
 });

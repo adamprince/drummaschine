@@ -1,0 +1,18 @@
+/* TEAM */
+Your title: Adam Prince
+Site: http://adamprince.studio
+GitHub: adamprince
+Location: San Diego, USA
+
+/* THANKS */
+Name: name or url
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript
+Components: Howler.js
+Software: Coda, Tower, CodeKit
+
+/* COLOPHON */
+Typeface: IBM Plex Sans
+Designers: Mike Abbink and Bold Monday
+URL: https://fonts.google.com/specimen/IBM+Plex+Sans

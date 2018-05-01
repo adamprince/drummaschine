@@ -68,14 +68,22 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
+  margin: 2px;
 
   .pad {
-    background-color: transparent;
-    border: 3px solid $purple;
+    background-color: rgba(255,255,255,.4);
+    cursor: pointer;
     flex-grow: 1;
     height: 25vh;
+    margin: 2px;
+    overflow: hidden;
+    position: relative;
     transition: background-color 0.3s ease;
-    width: calc(100vw / 3);
+    width: calc(100vw/3 - 6px);
+
+    &:hover {
+      background-color: rgba(255,255,255,.2);
+    }
 
     &:active {
       background-color: LightSalmon;
@@ -87,7 +95,9 @@ a:hover {
 }
 
 .content {
+  margin: 0 auto;
   padding: $spacer;
+  max-width: 26em;
 }
 
 .main {
