@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700");
+@keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html,
+body {
+  min-height: 100%; }
+
+body {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(45deg, LightSalmon, LightYellow);
+  animation: animate-gradient 15s ease infinite;
+  background-size: 400% 400%;
+  color: #383838;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 150%;
+  font-weight: 700;
+  margin: 0;
+  padding: 0; }
+
+a,
+a:hover {
+  color: #2a38c3; }
+
+.wrapper {
+  display: none; }
+  @media only screen and (min-width: 769px) {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center; } }
+
+.pads {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  margin: 2px; }
+  .pads .pad {
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    flex-grow: 1;
+    height: 25vh;
+    margin: 2px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.3s ease;
+    width: calc(100vw/3 - 6px); }
+    .pads .pad:hover {
+      background-color: rgba(255, 255, 255, 0.2); }
+    .pads .pad:active {
+      background-color: LightSalmon; }
+  @media only screen and (min-width: 769px) {
+    .pads {
+      display: none; } }
+
+.content {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 26em; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1; }
+
+.footer {
+  margin-top: auto;
+  padding: 2rem; }
