@@ -28,7 +28,8 @@ $spacer: 2rem;
 
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700');
 
-*, *:before, *:after {
+*, *:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -72,7 +73,6 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
-  margin: 2px;
 
   .pad {
     background-color: rgba(255,255,255,.4);
@@ -83,7 +83,7 @@ h1 {
     overflow: hidden;
     position: relative;
     transition: background-color 0.3s ease;
-    width: calc(100vw/3 - 6px);
+    width: calc(100%/4 - 8px);
 
     &:hover {
       background-color: rgba(255,255,255,.2);
@@ -92,6 +92,7 @@ h1 {
     &:active {
       background-color: LightSalmon;
     }
+
   }
   @media only screen and (min-width: 769px) {
     display: none;
