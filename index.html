@@ -29,11 +29,11 @@
       <div class="pad" id="pad-12"></div>
     </div>
 
-    <div class="wrapper keyboard-only">
+    <div class="wrapper">
       <section class="main">
         <div class="content">
           <h1>drummaschine</h1>
-          <p>A web-based drum kit. Alphabetic characters (a–z) play sounds.</p>
+          <p>A web-based drum kit. Alphabetic characters (A–Z) play sounds.</p>
         </div>
       </section>
       <footer class="footer">
@@ -44,13 +44,17 @@
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/min/main-min.js"></script>
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75900499-4"></script>
     <script>
-      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-      ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-75900499-4');
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
   </body>
 </html>
